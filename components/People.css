@@ -1,0 +1,251 @@
+/* General reset */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Head container styles */
+  .head-containor {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    background-color: #f6f4f4;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 0 20px;
+    position: fixed; /* Fix the header to the top of the page */
+    top: 0; /* Ensure it stays at the top */
+    left: 0; /* Ensure it stretches across the page */
+    width: 100%; /* Make the header span the full width of the screen */
+    z-index: 1000; /* Ensure the header stays on top of other elements */
+  }
+  
+  /* Add padding-top to prevent content from being hidden behind the fixed header */
+  body {
+    padding-top: 80px; /* Adjust this value based on the height of your header */
+  }
+  
+  /* Logo styles */
+  .logo {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo img {
+    width: 100px; /* Adjust logo size as needed */
+    height: auto;
+    object-fit: contain;
+    margin-right: 10px;
+  }
+  
+  .peoples {
+    font-size: 20px;
+    font-weight: bold;
+    color: #D83A56; /* Primary logo color */
+    margin: 0;
+  }
+  
+  .orphans {
+    font-size: 16px;
+    font-weight: normal;
+    color: #A42CD6; /* Secondary color from the logo */
+    margin: 0;
+  }
+  
+  /* Navbar styles */
+  .navbar {
+    display: flex;
+    align-items: center;
+  }
+  
+  .nav-list {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding-right: 50px;
+  }
+  
+  .nav-item {
+    position: relative;
+    margin: 0 15px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    color: #D83A56; /* Use logo primary color */
+    padding-bottom: 5px; /* Space for bottom border */
+  }
+  
+  .nav-item:hover {
+    color: #ce415b;
+    border-bottom: 3px solid #A42CD6; /* Secondary color */
+  }
+  
+  /* Dropdown styles */
+  .dropdown {
+    position: absolute;
+    top: calc(100% + 5px); /* Place dropdown below the nav item */
+    left: 0;
+    background-color: #f9f9f9;
+    border: 1px solid #D83A56; /* Match logo color */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 10px 0;
+    list-style: none;
+    margin: 0;
+    z-index: 1000;
+  }
+  
+  .dropdown-item {
+    padding: 8px 15px;
+    font-size: 14px;
+    color: #333;
+    white-space: nowrap;
+  }
+  
+  .dropdown-item:hover {
+    background-color: #FDEDEE; /* Soft color from the logo */
+    color: #cd2544;
+  }
+  
+  /* Background section styles */
+  .background-section {
+    height: 400px; /* Adjust height as needed */
+    background-image: url('../src//assets/bgimg.webp'); /* Path to your uploaded image */
+    background-size: cover; /* Ensures the image covers the entire section */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents tiling */
+  }
+  
+  /* About section styles */
+  .about-section {
+    padding: 20px;
+    background-color: #fff;
+    text-align: center;
+    color: #333;
+    line-height: 1.6;
+    font-size: 18px;
+    margin: 0 auto;
+    max-width: 800px;
+    border-top: 2px solid #D83A56; /* Matches logo color */
+  }
+  
+  .about-section h2 {
+    font-size: 28px;
+    font-weight: bold;
+    color: #D83A56; /* Matches logo color */
+    margin-bottom: 10px;
+  }
+  
+  .about-section p {
+    margin: 10px 0;
+  }
+  
+  .signup {
+    padding: 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+  }
+  
+  .signup-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  
+  .form-input {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .form-button {
+    padding: 10px;
+    font-size: 18px;
+    color: #fff;
+    background-color: #D83A56;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .form-button:hover {
+    background: linear-gradient(135deg, #d83a56, #a42cd6); /* Gradient background */
+  }
+
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .background-section {
+      height: 250px; /* Adjust height for smaller screens */
+      background-size: cover; /* Ensure it still covers the section */
+    }
+  
+    .head-containor {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .navbar {
+      width: 100%;
+      justify-content: center;
+    }
+  
+    .nav-list {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .nav-item {
+      margin: 10px 0;
+    }
+  }
+  /* Footer styles */
+.footer {
+    background: linear-gradient(135deg, #d83a56, #a42cd6); /* Gradient background */
+    color: #fff; /* White text */
+    padding: 40px 20px; /* Adjust padding */
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    font-size: 16px; /* Slightly larger text for readability */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Box shadow for subtle depth */
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.footer .social-links {
+    margin-top: 15px;
+}
+
+.footer .social-links a {
+    margin: 0 15px; /* Space between social icons */
+    transition: transform 0.3s ease, color 0.3s ease; /* Smoother hover effects */
+}
+
+.footer .social-icon {
+    font-size: 25px;
+    transition: transform 0.3s ease, color 0.3s ease; /* Smooth transition */
+    color: #fff; /* Default white icons */
+}
+
+.footer .social-icon:hover {
+    transform: scale(1.2); /* Slightly larger on hover */
+    color: #fff; /* Icon color stays white */
+    text-shadow: 0 0 10px #ff79c6, 0 0 20px #ff79c6; /* Neon effect on hover */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .footer-content {
+        padding: 15px;
+    }
+    .footer .social-links a {
+        margin: 0 10px; /* Adjust space for smaller screens */
+    }
+}
